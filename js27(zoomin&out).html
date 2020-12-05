@@ -1,0 +1,57 @@
+<!--DOCTYPE html not used-->
+<html>
+<head>
+	<title>basic animation part 2</title>
+	<script type="text/javascript">
+		
+		var width = 100;
+		var difference = 2;
+		var intervalID = 0;
+
+		function increase()
+		{
+			intervalID = setInterval(zoomIn,20);
+		}
+
+		function zoomIn()
+		{
+			if(width<200)
+			{
+				width = width+difference;
+				document.getElementById("img1").style.width =width;
+				console.log(width);
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+		}
+
+
+		function decrease()
+		{
+			clearInterval(intervalID);
+			intervalID=setInterval(zoomOut,20);
+		}
+
+		function zoomOut()
+		{
+			if(width>100)
+			{
+				width=width-difference;
+				document.getElementById("img1").style.width= width;
+				console.log(width);
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+		}
+	</script>
+</head>
+<body>
+	<br>
+	<br>
+	<img onmouseover="increase()" onmouseout="decrease()" id="img1" src="https://cnet3.cbsistatic.com/img/pLwWAw3f1OdjhUWe1-u0jcqhIcI=/1200x630/2019/09/10/d3dc3047-4c7f-499e-8b8c-240b3e27c6d2/google-logo-6.jpg" width="200">
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expression in JS</title>
+	<script type="text/javascript">
+
+		function validate() 
+		{
+		var username = document.getElementById("uname").value;
+		//regx = new RegExp("E00","i");
+		//[Another method for regx]
+
+		var regx = /[sdp]imple/;
+
+		/*input are:-   Outputs
+			Simple - [valid username]
+			dimple - [valid username]
+			pimple - [valid username]
+			kimple - [Invalid]
+			uhfjfd - [Invalid]
+			Any thing which does not start with s or d or p here is invalid.
+		*/
+
+
+		//var regx = /E00/; 
+
+
+		var regx = /[a-x A-x]00/;//Any charater betweeen a-x is valid followed by 00
+
+
+
+		if(regx.test(username))
+		{
+			alert("Valid Username");
+		}
+	 	else
+		{
+			alert("Invalid Username");
+			document.getElementById("lbluser").style.visibility ="visible";
+		}
+	}
+	</script>
+</head>
+<body>
+<form>
+
+		<input id="uname" placeholder="Username" type="text"/>
+		<label id="lbluser" style="color: red;visibility : hidden">Invalid Username
+			
+		</label>
+		<br><br>
+		<button onclick="validate()" type="submit">Submit</button>
+	</form>
+</body>
+</html>

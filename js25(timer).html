@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timing functions</title>
+	<link rel="stylesheet" type="text/css" href="jQuery.css">
+	<script type="text/javascript">
+		/*
+		1.setTimeout() allows you to execute statements ONES after an interval
+		2.clearTimout() method clears a timer seet with the setTimeout() method 
+		3.setInterval() method clears a timer set with the setIntervl()
+		method.
+		4.clearInterval() method clears a timer set with the setInterval() method
+
+		*/
+
+		var ID=0;
+		var seconds=0;
+		function printMsg() 
+		{
+			//(1.)document.getElementById("op").innerHTML = "5 seconds have passed";
+
+			document.getElementById("op").innerHTML = seconds+ "sec";
+			seconds++;
+			document.getElementById("op").style.color = "blue";
+
+		}
+		function start()
+		{
+			//(1.)ID=window.setTimeout(printMsg,5000);//5000 is used for 5 sec.
+
+			ID=window.setInterval(printMsg,1000);
+		}
+		function stop()
+		{
+			//(1.)window.clearTimeout(ID);//[used to reset the time again]
+
+			window.clearInterval(ID);
+		}
+	</script>
+</head>
+<body>
+<div id="btnbar1">
+	<button onclick="start()" id = "btnAdd"><b>START</b></button>
+	<h2 id="op">Some text </h2>
+</div>
+<div id="btnbar2">
+	<button onclick="stop()" id = "btnStop"><b>STOP</b></button>
+	<p>click only once</p>
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add or concatenate</title>
+	<script type="text/javascript">
+		
+		function addvalues()
+		{
+			var a = document.getElementById("t1").value;
+			var b = document.getElementById("t2").value;
+			document.getElementById("op").innerHTML = "Result = "+(a+b);
+			console.log(a+b); //to see the output on console
+		}
+	</script>
+</head>
+<body>
+	<input id="t1" type="text" placeholder="Text 1">
+	<br><br>
+	<input id="t2" type="text" placeholder="Text 2">
+	<br><br>
+	<button onclick = "addvalues()" id = "output">Add</button>
+	<h2 id="op">Result = </h2>
+</body>
+</html>

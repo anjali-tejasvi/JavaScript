@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation</title>
+	<script type="text/javascript">
+		
+		function changeStyling() 
+		{
+			var para = document.getElementsByTagName("p");
+		para[0].style.color = "brown";
+		para[0].style.fontWeight = "bold";
+		para[1].style.color = "tomato";
+		para[2].style.fontWeight = "bold";
+		para[3].style.fontStyle = "italic";
+		para[3].style.color="green";
+		para[4].style.color = "blue";
+		/*for(var i = 0; i<para.length;i++)
+		{
+			para[i].style.color = "blue";
+		}*/
+
+		  }
+	</script>
+</head>
+<body>
+		<p>This is paragraph 1</p>
+		<p>This is paragraph 2</p>
+	    <p>This is paragraph 3</p>
+    	<p>This is paragraph 4</p>
+		<p>This is paragraph 5</p>
+
+		<br>
+		<button onclick="changeStyling()">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!--PURPOUSE OF THIS CODE
+	To fade out the pic by 0.1 &
+	To fade in the pic by 0.1
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade in & Fade out</title>
+	<script type="text/javascript">
+		var opacity =0;
+		var intervalID =0;
+
+		function fadeout() 
+		{
+			intervalID=setInterval(hide,200);
+		}
+		function hide()
+		{
+			var img = document.getElementById("img1");
+			opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));//window lin will also give opacity but it will give it in a string ,therefore to change in number we have to use Number.
+
+			if(opacity>0)
+			{
+				opacity = opacity -0.1;
+				img.style.opacity= opacity;
+				console.log(opacity);
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+			
+		}
+		function fadein()
+		{
+			intervalID= setInterval(show,200);
+		}
+
+		function show()
+		{
+			var img = document.getElementById("img1");
+			opacity = Number(window.getComputedStyle(img/*no ivreted comma*/).getPropertyValue("opacity"));
+			if(opacity<1)
+			{
+				opacity= opacity+0.1;
+				img.style.opacity = opacity;
+				console.log(opacity);
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+		}
+	</script>
+</head>
+<body>
+	<button id="btnadd" onclick="fadeout()">Fade Out</button>
+	<br><br>
+	<img id ="img1" style = "opacity: 1"src="https://images.theconversation.com/files/93616/original/image-20150902-6700-t2axrz.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip" width = "398px"/>
+	<br><br>
+	<button id="btnstop" onclick= "fadein()">Fade In</button>
+</body>
+</html>

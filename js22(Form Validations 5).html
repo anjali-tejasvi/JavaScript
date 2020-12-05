@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular expression in js</title>
+	<script type="text/javascript">
+
+
+
+/*   \d - match any digit 
+	      (equal to [0-9])
+
+	 \w - match any other word character 
+	       (a-z,A-Z,0-9,_)
+
+	 \s - match whitespace character 
+	         (e.g- spaces & tabs)
+
+	 \t - match atab only
+		/abc/ - only looks for this pattern abc
+		but,
+
+		/^abc/ - accepts only abc. not anything of this pattern
+	 */
+
+
+
+		function validate()
+		{
+			var text = document.getElementById("text1").value;
+
+			var regx = /[7-9]\d{9}/;
+
+			if(regx.test(text))
+			{
+				document.getElementById("lbltext").innerHTML= "valid";
+				document.getElementById("lbltext").style.visibility= " visible";
+				document.getElementById("lbltext").style.color= "green";
+			}
+			else
+			{
+				document.getElementById("lbltext").innerHTML= "Invalid";
+				document.getElementById("lbltext").style.visibility= "visible";
+				document.getElementById("lbltext").style.color= "red";
+				
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+	<input id = "text1" placeholder="Cellphone" type="text"/><br>
+	<label id="lbltext" style="color: red;visibility : hidden">Invalid
+	</label>
+	<br>
+	<button onclick="validate()" type="button">Submit</button>
+	</form>
+</body>
+</html>

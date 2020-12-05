@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regulaar expression in Js -4</title>
+	<script type="text/javascript">
+
+		/*   \d - match any digit 
+	      (equal to [0-9])
+
+	 \w - match any other word character 
+	       (a-z,A-Z,0-9,_)
+
+	 \s - match whitespace character 
+	         (e.g- spaces & tabs)
+
+	 \t - match atab only
+		/abc/ - only looks for this pattern abc
+		but,
+
+		/^abc/ - accepts only abc. not anything of this pattern
+	 */
+
+
+		function validate()
+		{
+			var text = document.getElementById("text1"). value;
+
+			//var regx = /a.b/ //dot means anything can be enterd between a to b.
+
+			var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z-z]{2,20})$/;
+			//@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+	//   {2 char min},{20 char max}
+
+
+			/* + is used to extend the string suppose someone has very large username.
+			  \.- is used to remove the restriction of any number inbetween.
+			1. Email starts from name and numbers.
+			2. some special characters (	e.g - @,#,*,_)
+			3.string of small letters (		e.g - gmail)
+			4.In laast extention 
+				(e.g - .com,.in)
+
+			*/
+
+			if(regx.test(text))
+			{
+				document.getElementById("lbltext").innerHTML = "valid";
+				document.getElementById("lbltext").style.visibility = " visible";
+				document.getElementById("lbltext").style.color ="green";
+			}
+			else
+			{
+				document.getElementById("lbltext").innerHTML = "Invalid";
+				document.getElementById("lbltext").style.visibility = "visible";
+				document.getElementById("lbltext").style.color = "red";
+			}
+		}
+	</script>
+	</script>
+</head>
+<body>
+	<form>
+		<input id="text1" placeholder="Email" type="text"/><br>
+		<label id="lbltext" style="color: red; visibility: hidden">Invalid</label><br>
+		<button onclick="validate()" type = "button">Submit</button>
+	</form>
+
+</body>
+</html>

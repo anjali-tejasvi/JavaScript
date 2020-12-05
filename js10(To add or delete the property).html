@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Objects[To add or delete the property]</title>
+	<script type ="text/javascript">
+		//Objects in JS 
+
+		/*
+		Booleans can be objects(if defined with the new Keyword)
+
+		Numbers can be objects(if defined with the new keyword)
+
+		strrings can be objcts (if defined with the new keyword)
+
+		Dates are always objects
+		Maths are always
+		Regular expressions are always objects
+
+
+		*/
+		var str1 = new String();
+		
+		var Car = {
+
+			car_brand :"Tesla",
+			car_model :"Model ",
+			price : 35000,
+
+
+			teslaAutoPilot : function()
+			{
+		document.write("<h2>This car has Auto pilot</h2>");
+		 	}
+		}
+
+	Car.fuleType = "Electric";
+	Car.teslaAutoPilot();
+		document.write("<h2>"+typeof(str1)+"</h2>");
+	/*	Output :- Object [If str will be written insted of
+	new. String then Output will be String not Object]*/
+
+	document.write("<h2>"+Car.car_brand+"</h2>");
+	//      Output :- Tesla
+	document.write("<h2>"+Car.fuleType+"</h2>");
+
+
+/*Suppose we have to delete any property then we can use 
+  delete Car.price;  and if we gonna print it it will 
+  print Undefined */
+
+
+	
+	delete Car.price; 
+	document.write("<h2>"+Car.price+"</h2>");
+	//Output  :- Undefined
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mouseover & mouseout events</title>
+	<script type="text/javascript">
+		
+		/*mouseover & mouseout events*/
+		function setNewImage()
+		{
+			document.getElementsById("img1").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvAQY5ekimW2JkufP9fo2ToTIGDYmr3714OA&usqp=CAU";
+		}
+		function setOldImage()
+		{
+			alert("google logo");
+		}
+
+	</script>
+</head>
+<body>
+       <img id = "img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="https://images.theconversation.com/files/93616/original/image-20150902-6700-t2axrz.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip" width="390" />
+</body>
+</html>

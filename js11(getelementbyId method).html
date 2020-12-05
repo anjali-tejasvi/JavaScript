@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Introduction to Objects</title>
+	<script type = "text/javascript">
+	/*Dom manpulation & getelementbyId method
+		*/
+
+	function buttonClick()
+	{
+		document.getElementById("heading").innerHTML="After clicking on the button you can see this [txt is changed]";
+		alert("Button clicked");
+
+ 
+       var x = document.getElementById("heading").innerHTML;
+	alert(x);
+	}
+
+	buttonClick();
+	</script>
+	
+</head>
+<body>
+	<button onclick = "buttonClick()">Click on Me</button>
+	<h2 id = "heading">Some Random Text</h2>
+	 
+</body>
+</html>
+

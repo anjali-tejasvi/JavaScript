@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope of Variable</title>
+	<script type="text/javascript">
+           
+           /*In JS we have 2 types of scopes - globle & Local depending upon where you create your variables*/
+
+
+           var a = 5;// globle value 
+           document.write("<h2>"+a+"</h2>"); 
+
+           function myfunction()
+           {
+           	var b = 4;//local variable
+           	document.write("<h2>"+b+"</h2>"); 
+
+           }
+
+
+           myfunction();
+
+
+           //Arrays in JS
+
+           var car1 = "Audi";
+           var car2 = "Volvo";
+           var car3 = "BMW";
+
+           var cars = ["BMW","Volvo","Audi"];
+           cars.push("Mercedes");
+
+           for(var i =0; i<cars.length;i++)
+           {
+
+           document.write("<h2>"+cars[i]+"</h2>");
+           } 
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

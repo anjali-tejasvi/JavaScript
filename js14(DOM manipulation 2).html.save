@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulations</title>
+<script type = "text/javascript">
+/*DOM manipulation & getelementbyId method*/
+
+	function fn1()
+	{
+		var select = document.getElementById("selectbox");
+		alert(select.options[select.selectedIndex].value)
+	}
+</script>
+
+</head>
+<body>
+	<select id = "selectbox">
+	<option value = "Phython">Phython</option>
+	<option value = "R language">R language</option>
+	<option value = "core Java">core Java</option>
+	<option value = "Javascript">Javascript</option>
+	</select>
+	<br><br>
+	<button onclick = "fn1()">Click Me</button>
+
+</body>
+</html>
