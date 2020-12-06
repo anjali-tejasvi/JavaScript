@@ -198,7 +198,8 @@ output:
 </body>
 </html>
 ```
-> output:-
+output:
+
 >1
 >3
 >5
@@ -238,6 +239,8 @@ output:
 </body>
 </html>
 ```
+output:
+
 >Anjali
 >Anjali Tejasvi
 >Anjali Tejasvi
@@ -334,6 +337,8 @@ output:
 </body>
 </html>
 ```
+Output:
+
 >5
 >4
 >BMW
