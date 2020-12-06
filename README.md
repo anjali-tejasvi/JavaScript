@@ -159,7 +159,8 @@
 first line is output of first code 
 Second line iss output of second code.
 
-> output:- 
+output:
+
 >          5    2nd output
 >          10      2
 >          15      4
